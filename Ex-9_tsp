@@ -5,7 +5,7 @@ def total_distance(path, cities):
     total = 0
     for i in range(len(path) - 1):
         total += distance(cities[path[i]], cities[path[i + 1]])
-    total += distance(cities[path[-1]], cities[path[0]])  # Return to starting city
+    total += distance(cities[path[-1]], cities[path[0]])  
     return total
 def brute_force_tsp(cities):
     num_cities = len(cities)
