@@ -1,15 +1,12 @@
 import heapq
-
 class PuzzleNode:
     def _init_(self, state, parent=None, move=None):
         self.state = state
         self.parent = parent
         self.move = move
         self.cost = 0 if parent is None else parent.cost + 1
-
     def _lt_(self, other):
         return (self.cost + self.heuristic()) < (other.cost + other.heuristic())
-
     def _eq_(self, other):
         return self.state == other.state
 
